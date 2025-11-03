@@ -123,11 +123,11 @@ This repository is structured as a comprehensive learning path for DevOps engine
 ## 🎯 **Indexed Learning Path Navigation**
 
 ### **Phase 1: Foundation Knowledge (Weeks 1-2)**
-**Start Here**: [`10-learning-path/11-foundations/`](./learning-path/01-foundations/)
-- **11.1**: [`spring-boot-containerization.md`](./learning-path/01-foundations/spring-boot-containerization.md)
-- **11.2**: `devops-principles-for-microservices.md` (to be created)
-- **11.3**: `aws-services-for-spring-boot.md` (to be created)
-- **11.4**: `microservices-architecture-patterns.md` (to be created)
+**Start Here**: [`10-learning-path/11-foundations/`](./10-learning-path/11-foundations/)
+- **11.1**: [`spring-boot-containerization.md`](./10-learning-path/11-foundations/11.1-spring-boot-containerization.md)
+- **11.2**: [`devops-principles-for-microservices.md`](./10-learning-path/11-foundations/11.2-devops-principles-for-microservices.md)
+- **11.3**: [`aws-services-for-spring-boot.md`](./10-learning-path/11-foundations/11.3-aws-services-for-spring-boot.md)
+- **11.4**: [`microservices-architecture-patterns.md`](./10-learning-path/11-foundations/11.4-microservices-architecture-patterns.md)
 - **Time Investment**: 15-20 hours/week
 - **Outcome**: Understanding of Spring Boot + DevOps fundamentals
 
@@ -141,18 +141,18 @@ This repository is structured as a comprehensive learning path for DevOps engine
 - **Outcome**: Production-ready containerized microservices
 
 ### **Phase 3: Security Implementation (Weeks 5-6)** 🚨 **PRIORITY**
-**Key Documents**: [`10-learning-path/13-aws-security/`](./learning-path/03-aws-security/)
-- **13.1**: [`aws-waf-deep-dive.md`](./learning-path/03-aws-security/aws-waf-deep-dive.md) ⭐
-- **13.2**: `aws-shield-protection.md` (to be created)
+**Key Documents**: [`10-learning-path/13-aws-security/`](./10-learning-path/13-aws-security/)
+- **13.1**: [`aws-waf-deep-dive.md`](./10-learning-path/13-aws-security/13.1-aws-waf-deep-dive.md) ⭐
+- **13.2**: [`aws-shield-protection.md`](./10-learning-path/13-aws-security/13.2-aws-shield-protection.md)
 - **13.3**: `cloudfront-security.md` (to be created)
 - **13.4**: `security-automation.md` (to be created)
-- **Hands-On**: [`22-week-02-aws-waf-setup/`](./hands-on-labs/week-02-aws-waf-setup/)
+- **Hands-On**: [`22-week-02-aws-waf-setup/`](./20-hands-on-labs/22-week-02-aws-waf-setup/)
 - **Time Investment**: 20-25 hours/week (Priority focus)
 - **Outcome**: Production security with WAF & Shield
 
 ### **Phase 4: CI/CD Pipeline (Weeks 7-8)** 🚨 **PRIORITY**
-**Key Documents**: [`10-learning-path/14-cicd-pipelines/`](./learning-path/04-cicd-pipelines/)
-- **14.1**: `gitlab-cicd-spring-boot-microservices.md` (to be created)
+**Key Documents**: [`10-learning-path/14-cicd-pipelines/`](./10-learning-path/14-cicd-pipelines/)
+- **14.1**: [`gitlab-cicd-spring-boot-microservices.md`](./10-learning-path/14-cicd-pipelines/14.1-gitlab-cicd-spring-boot-microservices.md)
 - **14.2**: `multi-microservice-pipeline-patterns.md` (to be created)
 - **14.3**: `angular-build-deployment.md` (to be created)
 - **14.4**: `security-scanning-integration.md` (to be created)
