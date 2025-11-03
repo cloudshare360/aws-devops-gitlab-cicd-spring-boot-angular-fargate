@@ -18,3 +18,5 @@ WAF - Scan
 Firewall Rues -> ALBS ->Application
 Cloud Watch Dash Boards
 Monitoring - what kind of Fixes
+SpringBoot, Angular, Farget, ECS
+need to build cloud watch dashboards for application monitoring, setting up alarms etc. consider all the project activities in terms of monitoring.
