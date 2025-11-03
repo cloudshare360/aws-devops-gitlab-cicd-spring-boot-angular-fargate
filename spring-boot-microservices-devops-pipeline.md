@@ -1,5 +1,8 @@
 # Spring Boot Microservices to AWS Fargate: Complete DevOps Pipeline
 
+## 🧭 Navigation
+**📖 Repository Navigation**: See [`NAVIGATION.md`](./NAVIGATION.md) for complete learning path guide
+
 ## Document Overview
 **Target**: Deploy Spring Boot microservices + Angular frontend to AWS Fargate with complete security and CI/CD pipeline  
 **Tech Stack**: Spring Boot, Angular, Oracle RDS, GitLab CI/CD, AWS Fargate, CloudFront, WAF, Shield  

@@ -1,14 +1,22 @@
-# Project Folder Structure
+# 📁 Repository Folder Structure
 
-## Complete Hierarchical Organization
+## 🧭 Navigation
+**For detailed navigation guide**: See [`NAVIGATION.md`](./NAVIGATION.md)
+
+## 📂 Complete Hierarchical Organization
 
 ```
 📁 aws-devops-gitlab-cicd-spring-boot-angular-fargate/
-├── 📄 raw-requirements.md                    # Original scattered requirements
-├── 📄 requirements.md                        # 14-week comprehensive learning path
-├── 📄 requirements-based-on-project-priority.md  # Role-specific immediate priorities
-├── 📄 learning-plan.md                       # Lambda→DevOps transition plan
-├── 📄 folder-structure.md                    # This document
+├── � README.md                                    # Repository overview
+├── 🧭 NAVIGATION.md                               # Complete navigation guide ⭐ NEW
+├── 📄 folder-structure.md                         # This document
+│
+├── 🎯 CORE DOCUMENTS
+│   ├── 📖 spring-boot-microservices-devops-pipeline.md  # Main learning document ⭐
+│   ├── �📄 raw-requirements.md                    # Original scattered requirements
+│   ├── 📄 requirements.md                        # 14-week comprehensive learning path
+│   ├── 📄 requirements-based-on-project-priority.md  # Role-specific immediate priorities
+│   └── 📄 learning-plan.md                       # Lambda→DevOps transition plan
 │
 ├── 📁 learning-path/                         # Sequential learning modules
 │   ├── 📁 01-foundations/
@@ -163,10 +171,15 @@
 ## Quick Start Guide
 
 ### Week 1 Action Plan
-1. **Priority Learning**: AWS WAF basics (`learning-path/03-aws-security/`)
-2. **Hands-On Practice**: WAF setup lab (`hands-on-labs/week-02-aws-waf-setup/`)
-3. **Progress Tracking**: Update dashboard daily (`project-tracking/dashboard.md`)
-4. **Foundation Building**: Docker basics (`learning-path/01-foundations/containerization-basics.md`)
+1. **Navigation First**: Review [`NAVIGATION.md`](./NAVIGATION.md) for complete learning guide
+2. **Priority Learning**: AWS WAF basics (`learning-path/03-aws-security/`)
+3. **Hands-On Practice**: WAF setup lab (`hands-on-labs/week-02-aws-waf-setup/`)
+4. **Progress Tracking**: Update dashboard daily (`project-tracking/dashboard.md`)
+5. **Foundation Building**: Docker basics (`learning-path/01-foundations/containerization-basics.md`)
+
+---
+
+**📖 For comprehensive navigation and learning paths, see [`NAVIGATION.md`](./NAVIGATION.md)**
 
 ### Success Indicators
 - [ ] Folder structure understood and navigated easily

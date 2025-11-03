@@ -1,5 +1,8 @@
 # 🌟 DevOps Learning Hub: Spring Boot Microservices to AWS Fargate
 
+## 🧭 **Navigation Guide**
+**📖 Complete Navigation**: See [`NAVIGATION.md`](./NAVIGATION.md) for detailed repository guide and learning paths
+
 ## 🎯 **Quick Start Navigation**
 **New to DevOps?** → Start with `spring-boot-microservices-devops-pipeline.md` (Your main learning document)  
 **Need specific component?** → Use the tree structure below to navigate directly  
