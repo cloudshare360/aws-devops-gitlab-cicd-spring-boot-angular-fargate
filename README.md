@@ -1,7 +1,8 @@
 # 🌟 DevOps Learning Hub: Spring Boot Microservices to AWS Fargate
 
 ## 🧭 **Navigation Guide**
-**📖 Complete Navigation**: See [`NAVIGATION.md`](./NAVIGATION.md) for detailed repository guide and learning paths
+**📖 Complete Navigation**: See [`01-NAVIGATION.md`](./NAVIGATION.md) for detailed repository guide and learning paths  
+**📋 Quick Reference**: See [`QUICK-REFERENCE.md`](./QUICK-REFERENCE.md) for indexed document table
 
 ## 🎯 **Quick Start Navigation**
 **New to DevOps?** → Start with `spring-boot-microservices-devops-pipeline.md` (Your main learning document)  
@@ -11,73 +12,77 @@
 
 ---
 
-## 📂 **Complete Learning Tree Structure**
+## 📂 **Indexed Learning Tree Structure**
 
 ```
 🏠 DevOps Learning Hub (You are here)
 │
 ├── 🎯 QUICK START (Start Here!)
-│   ├── 📖 spring-boot-microservices-devops-pipeline.md ⭐ MAIN DOCUMENT
-│   ├── 📋 requirements-based-on-project-priority.md (Role-specific priorities)
+│   ├── 📖 02-spring-boot-microservices-devops-pipeline.md ⭐ MAIN DOCUMENT
+│   ├── 📋 05-requirements-based-on-project-priority.md (Role-specific priorities)
 │   └── 📁 Quick Reference
 │       ├── 🔧 Emergency procedures for production issues
 │       └── 📋 Daily checklists and progress tracking
 │
 ├── 📚 LEARNING PATH (Sequential Modules)
-│   ├── 📁 01-foundations/ (Spring Boot + DevOps Basics)
-│   │   ├── 📄 spring-boot-containerization.md
-│   │   ├── 📄 devops-principles-for-microservices.md
-│   │   ├── 📄 aws-services-for-spring-boot.md
-│   │   └── 📄 microservices-architecture-patterns.md
+│   ├── 📁 11-foundations/ (Spring Boot + DevOps Basics)
+│   │   ├── 📄 11.1-spring-boot-containerization.md
+│   │   ├── 📄 11.2-devops-principles-for-microservices.md
+│   │   ├── 📄 11.3-aws-services-for-spring-boot.md
+│   │   └── 📄 11.4-microservices-architecture-patterns.md
 │   │
-│   ├── 📁 02-containerization/ (Docker + Spring Boot)
-│   │   ├── 📄 spring-boot-docker-optimization.md
-│   │   ├── 📄 multi-stage-builds-spring-boot.md
-│   │   ├── 📄 ecs-fargate-deployment.md
-│   │   └── 📁 hands-on-exercises/
-│   │       ├── 🔨 containerize-spring-boot-microservice/
-│   │       └── 🔨 deploy-to-fargate/
+│   ├── 📁 12-containerization/ (Docker + Spring Boot)
+│   │   ├── 📄 12.1-spring-boot-docker-optimization.md
+│   │   ├── 📄 12.2-multi-stage-builds-spring-boot.md
+│   │   ├── 📄 12.3-ecs-fargate-deployment.md
+│   │   └── � 12.4-microservices-orchestration.md
 │   │
-│   ├── 📁 03-aws-security/ ⚡ IMMEDIATE PRIORITY
-│   │   ├── 📄 aws-waf-for-spring-boot-apis.md
-│   │   ├── 📄 aws-shield-ddos-protection.md
-│   │   ├── 📄 cloudfront-angular-security.md
-│   │   ├── 📄 rds-security-best-practices.md
-│   │   └── 📁 hands-on-exercises/
-│   │       ├── 🔨 waf-setup-spring-boot/
-│   │       ├── 🔨 shield-monitoring/
-│   │       └── 🔨 security-testing/
+│   ├── 📁 13-aws-security/ ⚡ IMMEDIATE PRIORITY
+│   │   ├── 📄 13.1-aws-waf-deep-dive.md ⭐
+│   │   ├── 📄 13.2-aws-shield-protection.md
+│   │   ├── 📄 13.3-cloudfront-security.md
+│   │   └── 📄 13.4-security-automation.md
 │   │
-│   ├── 📁 04-cicd-pipelines/ ⚡ IMMEDIATE PRIORITY
-│   │   ├── 📄 gitlab-cicd-spring-boot-microservices.md
-│   │   ├── 📄 multi-microservice-pipeline-patterns.md
-│   │   ├── 📄 angular-build-deployment.md
-│   │   ├── 📄 security-scanning-integration.md
-│   │   └── 📁 hands-on-exercises/
-│   │       ├── 🔨 gitlab-runner-setup/
-│   │       ├── 🔨 spring-boot-pipeline/
-│   │       ├── 🔨 angular-deployment-pipeline/
-│   │       └── 🔨 end-to-end-pipeline/
+│   ├── 📁 14-cicd-pipelines/ ⚡ IMMEDIATE PRIORITY
+│   │   ├── 📄 14.1-gitlab-cicd-spring-boot-microservices.md
+│   │   ├── 📄 14.2-multi-microservice-pipeline-patterns.md
+│   │   ├── 📄 14.3-angular-build-deployment.md
+│   │   └── 📄 14.4-security-scanning-integration.md
 │   │
-│   ├── 📁 05-infrastructure-as-code/
-│   │   ├── 📄 terraform-for-spring-boot-infrastructure.md
-│   │   ├── 📄 aws-ecs-fargate-terraform.md
-│   │   ├── 📄 rds-oracle-terraform-setup.md
-│   │   └── 📄 cloudfront-waf-terraform.md
+│   ├── 📁 15-infrastructure-as-code/
+│   │   ├── � 15.1-terraform-fundamentals.md
+│   │   ├── � 15.2-aws-terraform-patterns.md
+│   │   ├── � 15.3-cloudformation-comparison.md
+│   │   └── � 15.4-state-management.md
 │   │
-│   └── 📁 06-monitoring-observability/
-│       ├── 📄 spring-boot-actuator-cloudwatch.md
-│       ├── 📄 microservices-monitoring-patterns.md
-│       ├── 📄 angular-performance-monitoring.md
-│       ├── 📄 database-monitoring-rds-oracle.md
-│       └── 📄 comprehensive-alerting-strategies.md
+│   └── 📁 16-monitoring-observability/
+│       ├── 📄 16.1-cloudwatch-advanced.md
+│       ├── 📄 16.2-application-monitoring.md
+│       ├── 📄 16.3-alerting-strategies.md
+│       └── 📄 16.4-cost-optimization.md
 │
-├── 🧠 AGENT MEMORY (AI Optimization)
-│   ├── 📄 user-profile.md (Your background & preferences)
-│   ├── 📄 conversation-log.md (Learning progress tracking)
-│   └── 📄 optimization-notes.md (Continuous improvement)
+├── 🔨 HANDS-ON LABS (Practical Implementation)
+│   ├── 📁 21-week-01-foundation-setup/
+│   ├── 📁 22-week-02-aws-waf-setup/ ⭐ PRIORITY LAB
+│   │   ├── 📄 22.1-README.md (Main lab guide)
+│   │   ├── 📄 22.2-waf-basic-deployment.md
+│   │   ├── 📄 22.3-custom-rules-creation.md
+│   │   └── 📄 22.4-monitoring-tuning.md
+│   ├── 📁 23-week-03-containerization-lab/
+│   ├── � 24-week-04-cicd-pipeline-lab/
+│   ├── 📁 25-week-05-infrastructure-lab/
+│   └── 📁 26-week-06-monitoring-lab/
 │
 ├── 📊 PROJECT TRACKING (Progress Management)
+│   ├── 📄 30.1-dashboard.md (Main progress dashboard)
+│   ├── 📄 30.2-weekly-milestones.md
+│   ├── 📄 30.3-skill-assessment.md
+│   └── 📄 30.4-completion-checklist.md
+│
+├── � DEVELOPMENT CONTEXT (AI Optimization)
+│   ├── 📄 50.1-conversation-log.md (Learning progress tracking)
+│   ├── 📄 50.2-user-profile.md (Your background & preferences)
+│   └── � 50.3-project-evolution.md (Repository change history)
 │   ├── 📄 dashboard.md ⭐ DAILY PROGRESS TRACKER
 │   ├── 📄 spring-boot-milestones.md (Specific to your tech stack)
 │   ├── 📁 weekly-reviews/ (Weekly progress assessments)

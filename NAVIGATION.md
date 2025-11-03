@@ -25,90 +25,155 @@ This repository is structured as a comprehensive learning path for DevOps engine
 
 ---
 
-## 📂 **Complete Repository Structure**
+## 📂 **Complete Repository Structure with Index**
 
 ```
 🏠 aws-devops-gitlab-cicd-spring-boot-angular-fargate/
 │
-├── 📋 README.md                                    # Repository overview & quick navigation
-├── 🗺️ NAVIGATION.md                               # This document - your guide
+├── 📋 00-README.md                                    # Repository overview & quick navigation
+├── 🗺️ 01-NAVIGATION.md                               # This document - your complete guide
 │
 ├── 🎯 CORE LEARNING DOCUMENTS
-│   ├── 📖 spring-boot-microservices-devops-pipeline.md  ⭐ MAIN DOCUMENT
-│   ├── 📅 learning-plan.md                        # Structured timeline & phases
-│   ├── 📋 requirements.md                         # Complete technical requirements
-│   ├── 🎯 requirements-based-on-project-priority.md # Role-specific focus areas
-│   └── 📄 raw-requirements.md                     # Original project specifications
+│   ├── 📖 02-spring-boot-microservices-devops-pipeline.md  ⭐ MAIN DOCUMENT
+│   ├── 📅 03-learning-plan.md                        # Structured timeline & phases
+│   ├── 📋 04-requirements.md                         # Complete technical requirements
+│   ├── 🎯 05-requirements-based-on-project-priority.md # Role-specific focus areas
+│   └── 📄 06-raw-requirements.md                     # Original project specifications
 │
 ├── 📚 SEQUENTIAL LEARNING PATH
-│   └── learning-path/
-│       ├── 01-foundations/                        # Spring Boot + DevOps basics
-│       │   └── 📄 spring-boot-containerization.md
-│       ├── 02-containerization/                   # Docker + Fargate deployment
-│       ├── 03-aws-security/                       # Security implementation
-│       │   └── 📄 aws-waf-deep-dive.md           # WAF configuration guide
-│       ├── 04-cicd-pipelines/                     # GitLab CI/CD setup
-│       ├── 05-infrastructure-as-code/             # Terraform & automation
-│       └── 06-monitoring-observability/           # Monitoring & logging
+│   └── 10-learning-path/
+│       ├── 11-foundations/                        # Spring Boot + DevOps basics
+│       │   ├── 11.1-spring-boot-containerization.md
+│       │   ├── 11.2-devops-principles-for-microservices.md
+│       │   ├── 11.3-aws-services-for-spring-boot.md
+│       │   └── 11.4-microservices-architecture-patterns.md
+│       │
+│       ├── 12-containerization/                   # Docker + Fargate deployment
+│       │   ├── 12.1-spring-boot-docker-optimization.md
+│       │   ├── 12.2-multi-stage-builds-spring-boot.md
+│       │   ├── 12.3-ecs-fargate-deployment.md
+│       │   └── 12.4-microservices-orchestration.md
+│       │
+│       ├── 13-aws-security/                       # Security implementation
+│       │   ├── 📄 13.1-aws-waf-deep-dive.md      # WAF configuration guide
+│       │   ├── 📄 13.2-aws-shield-protection.md   # DDoS protection setup
+│       │   ├── 📄 13.3-cloudfront-security.md     # CDN security integration
+│       │   └── 📄 13.4-security-automation.md     # Automated security responses
+│       │
+│       ├── 14-cicd-pipelines/                     # GitLab CI/CD setup
+│       │   ├── 📄 14.1-gitlab-cicd-spring-boot-microservices.md
+│       │   ├── 📄 14.2-multi-microservice-pipeline-patterns.md
+│       │   ├── 📄 14.3-angular-build-deployment.md
+│       │   └── 📄 14.4-security-scanning-integration.md
+│       │
+│       ├── 15-infrastructure-as-code/             # Terraform & automation
+│       │   ├── 📄 15.1-terraform-fundamentals.md
+│       │   ├── 📄 15.2-aws-terraform-patterns.md
+│       │   ├── 📄 15.3-cloudformation-comparison.md
+│       │   └── 📄 15.4-state-management.md
+│       │
+│       └── 16-monitoring-observability/           # Monitoring & logging
+│           ├── 📄 16.1-cloudwatch-advanced.md
+│           ├── 📄 16.2-application-monitoring.md
+│           ├── 📄 16.3-alerting-strategies.md
+│           └── 📄 16.4-cost-optimization.md
 │
 ├── 🔨 HANDS-ON PRACTICE
-│   └── hands-on-labs/
-│       └── week-02-aws-waf-setup/                 # WAF practical implementation
-│           └── 📄 README.md                       # Step-by-step lab guide
+│   └── 20-hands-on-labs/
+│       ├── 21-week-01-foundation-setup/           # Basic environment setup
+│       │   └── 📄 21.1-README.md                  # Environment preparation
+│       │
+│       ├── 22-week-02-aws-waf-setup/              # WAF practical implementation
+│       │   ├── 📄 22.1-README.md                  # Main lab guide
+│       │   ├── 📄 22.2-waf-basic-deployment.md   # Basic WAF setup
+│       │   ├── 📄 22.3-custom-rules-creation.md  # Advanced rule configuration
+│       │   └── 📄 22.4-monitoring-tuning.md      # Performance optimization
+│       │
+│       ├── 23-week-03-containerization-lab/       # Docker & Fargate hands-on
+│       ├── 24-week-04-cicd-pipeline-lab/          # GitLab CI/CD implementation
+│       ├── 25-week-05-infrastructure-lab/         # Terraform automation
+│       └── 26-week-06-monitoring-lab/             # Observability setup
 │
 ├── 📊 PROJECT MANAGEMENT
-│   └── project-tracking/
-│       └── 📄 dashboard.md                        # Progress tracking & milestones
+│   └── 30-project-tracking/
+│       ├── 📄 30.1-dashboard.md                   # Main progress dashboard
+│       ├── 📄 30.2-weekly-milestones.md           # Week-by-week targets
+│       ├── 📄 30.3-skill-assessment.md            # Self-evaluation tools
+│       └── 📄 30.4-completion-checklist.md        # Final project validation
 │
 ├── 📚 ADDITIONAL RESOURCES
-│   └── resources/                                 # Supplementary materials
+│   └── 40-resources/
+│       ├── 📄 40.1-reference-links.md             # External documentation
+│       ├── 📄 40.2-troubleshooting-guide.md       # Common issues & solutions
+│       ├── 📄 40.3-best-practices-checklist.md    # Industry standards
+│       └── 📄 40.4-certification-paths.md         # AWS/DevOps certifications
 │
 ├── 🤖 DEVELOPMENT CONTEXT
-│   └── agent-memory/
-│       ├── 📄 conversation-log.md                 # Development decisions log
-│       └── 📄 user-profile.md                     # Learner profile & background
+│   └── 50-agent-memory/
+│       ├── 📄 50.1-conversation-log.md            # Development decisions log
+│       ├── 📄 50.2-user-profile.md                # Learner profile & background
+│       └── 📄 50.3-project-evolution.md           # Repository change history
 │
-└── 📄 folder-structure.md                         # Detailed folder organization
+├── 📄 07-folder-structure.md                      # Detailed folder organization
+└── 📄 08-index.md                                 # GitHub Pages homepage
 ```
 
 ---
 
-## 🎯 **Learning Path Navigation**
+## 🎯 **Indexed Learning Path Navigation**
 
 ### **Phase 1: Foundation Knowledge (Weeks 1-2)**
-**Start Here**: [`learning-path/01-foundations/`](./learning-path/01-foundations/)
-- **Primary Document**: [`spring-boot-containerization.md`](./learning-path/01-foundations/spring-boot-containerization.md)
+**Start Here**: [`10-learning-path/11-foundations/`](./learning-path/01-foundations/)
+- **11.1**: [`spring-boot-containerization.md`](./learning-path/01-foundations/spring-boot-containerization.md)
+- **11.2**: `devops-principles-for-microservices.md` (to be created)
+- **11.3**: `aws-services-for-spring-boot.md` (to be created)
+- **11.4**: `microservices-architecture-patterns.md` (to be created)
 - **Time Investment**: 15-20 hours/week
 - **Outcome**: Understanding of Spring Boot + DevOps fundamentals
 
 ### **Phase 2: Containerization (Weeks 3-4)**
-**Continue With**: [`learning-path/02-containerization/`](./learning-path/02-containerization/)
-- **Focus**: Docker optimization & Fargate deployment
+**Continue With**: [`10-learning-path/12-containerization/`](./learning-path/02-containerization/)
+- **12.1**: `spring-boot-docker-optimization.md` (to be created)
+- **12.2**: `multi-stage-builds-spring-boot.md` (to be created)
+- **12.3**: `ecs-fargate-deployment.md` (to be created)
+- **12.4**: `microservices-orchestration.md` (to be created)
 - **Time Investment**: 15-20 hours/week
 - **Outcome**: Production-ready containerized microservices
 
 ### **Phase 3: Security Implementation (Weeks 5-6)** 🚨 **PRIORITY**
-**Key Documents**: [`learning-path/03-aws-security/`](./learning-path/03-aws-security/)
-- **Primary**: [`aws-waf-deep-dive.md`](./learning-path/03-aws-security/aws-waf-deep-dive.md)
-- **Hands-On**: [`hands-on-labs/week-02-aws-waf-setup/`](./hands-on-labs/week-02-aws-waf-setup/)
+**Key Documents**: [`10-learning-path/13-aws-security/`](./learning-path/03-aws-security/)
+- **13.1**: [`aws-waf-deep-dive.md`](./learning-path/03-aws-security/aws-waf-deep-dive.md) ⭐
+- **13.2**: `aws-shield-protection.md` (to be created)
+- **13.3**: `cloudfront-security.md` (to be created)
+- **13.4**: `security-automation.md` (to be created)
+- **Hands-On**: [`22-week-02-aws-waf-setup/`](./hands-on-labs/week-02-aws-waf-setup/)
 - **Time Investment**: 20-25 hours/week (Priority focus)
 - **Outcome**: Production security with WAF & Shield
 
 ### **Phase 4: CI/CD Pipeline (Weeks 7-8)** 🚨 **PRIORITY**
-**Key Documents**: [`learning-path/04-cicd-pipelines/`](./learning-path/04-cicd-pipelines/)
-- **Focus**: GitLab CI/CD for Spring Boot microservices
+**Key Documents**: [`10-learning-path/14-cicd-pipelines/`](./learning-path/04-cicd-pipelines/)
+- **14.1**: `gitlab-cicd-spring-boot-microservices.md` (to be created)
+- **14.2**: `multi-microservice-pipeline-patterns.md` (to be created)
+- **14.3**: `angular-build-deployment.md` (to be created)
+- **14.4**: `security-scanning-integration.md` (to be created)
 - **Time Investment**: 20-25 hours/week
 - **Outcome**: Automated deployment pipeline
 
 ### **Phase 5: Infrastructure as Code (Weeks 9-10)**
-**Documents**: [`learning-path/05-infrastructure-as-code/`](./learning-path/05-infrastructure-as-code/)
-- **Focus**: Terraform automation
+**Documents**: [`10-learning-path/15-infrastructure-as-code/`](./learning-path/05-infrastructure-as-code/)
+- **15.1**: `terraform-fundamentals.md` (to be created)
+- **15.2**: `aws-terraform-patterns.md` (to be created)
+- **15.3**: `cloudformation-comparison.md` (to be created)
+- **15.4**: `state-management.md` (to be created)
 - **Time Investment**: 15-20 hours/week
 - **Outcome**: Automated infrastructure provisioning
 
 ### **Phase 6: Monitoring & Observability (Weeks 11-12)**
-**Documents**: [`learning-path/06-monitoring-observability/`](./learning-path/06-monitoring-observability/)
-- **Focus**: CloudWatch, logging, alerts
+**Documents**: [`10-learning-path/16-monitoring-observability/`](./learning-path/06-monitoring-observability/)
+- **16.1**: `cloudwatch-advanced.md` (to be created)
+- **16.2**: `application-monitoring.md` (to be created)
+- **16.3**: `alerting-strategies.md` (to be created)
+- **16.4**: `cost-optimization.md` (to be created)
 - **Time Investment**: 15-20 hours/week
 - **Outcome**: Production monitoring setup
 
@@ -145,35 +210,44 @@ This repository is structured as a comprehensive learning path for DevOps engine
 
 ---
 
-## 🎯 **Role-Based Navigation**
+## 🎯 **Role-Based Navigation with Index**
 
 ### **DevOps Engineer (Primary Role)**
-**Start Here**: [`spring-boot-microservices-devops-pipeline.md`](./spring-boot-microservices-devops-pipeline.md)
+**Start Here**: [`02-spring-boot-microservices-devops-pipeline.md`](./spring-boot-microservices-devops-pipeline.md)
 **Focus Areas**:
-1. Security: [`learning-path/03-aws-security/`](./learning-path/03-aws-security/)
-2. CI/CD: [`learning-path/04-cicd-pipelines/`](./learning-path/04-cicd-pipelines/)
-3. Infrastructure: [`learning-path/05-infrastructure-as-code/`](./learning-path/05-infrastructure-as-code/)
+1. **Security**: [`13-aws-security/`](./learning-path/03-aws-security/)
+   - 13.1 AWS WAF Deep Dive ⭐
+   - 13.2 AWS Shield Protection
+   - 13.3 CloudFront Security
+2. **CI/CD**: [`14-cicd-pipelines/`](./learning-path/04-cicd-pipelines/)
+   - 14.1 GitLab CI/CD for Spring Boot
+   - 14.2 Multi-microservice Pipelines
+3. **Infrastructure**: [`15-infrastructure-as-code/`](./learning-path/05-infrastructure-as-code/)
+   - 15.1 Terraform Fundamentals
+   - 15.2 AWS Terraform Patterns
 
 ### **Security Engineer**
-**Start Here**: [`learning-path/03-aws-security/aws-waf-deep-dive.md`](./learning-path/03-aws-security/aws-waf-deep-dive.md)
+**Start Here**: [`13.1-aws-waf-deep-dive.md`](./learning-path/03-aws-security/aws-waf-deep-dive.md)
 **Focus Areas**:
-- AWS WAF configuration and tuning
-- Shield DDoS protection setup
-- Security automation and monitoring
+- **13.1**: AWS WAF configuration and tuning ⭐
+- **13.2**: Shield DDoS protection setup
+- **13.4**: Security automation and monitoring
+- **22.1-22.4**: Hands-on WAF lab series
 
 ### **Platform Engineer**
-**Start Here**: [`learning-path/05-infrastructure-as-code/`](./learning-path/05-infrastructure-as-code/)
+**Start Here**: [`15.1-terraform-fundamentals.md`](./learning-path/05-infrastructure-as-code/)
 **Focus Areas**:
-- Terraform infrastructure automation
-- Fargate cluster management
-- Resource optimization
+- **15.1-15.4**: Complete infrastructure automation series
+- **12.3**: ECS Fargate deployment patterns
+- **16.4**: Resource optimization strategies
 
 ### **Application Developer**
-**Start Here**: [`learning-path/01-foundations/spring-boot-containerization.md`](./learning-path/01-foundations/spring-boot-containerization.md)
+**Start Here**: [`11.1-spring-boot-containerization.md`](./learning-path/01-foundations/spring-boot-containerization.md)
 **Focus Areas**:
-- Spring Boot containerization
-- CI/CD integration
-- Application monitoring
+- **11.1-11.4**: Foundation series for developers
+- **12.1-12.2**: Spring Boot containerization
+- **14.1 & 14.3**: CI/CD integration for apps
+- **16.2**: Application monitoring
 
 ---
 
@@ -250,5 +324,110 @@ By following this navigation guide, you should be able to:
 
 ---
 
+## 📊 **Complete Document Index Reference**
+
+### **00-09: Repository Structure & Core Documents**
+- **00**: `README.md` - Repository overview & quick navigation
+- **01**: `NAVIGATION.md` - This complete navigation guide ⭐
+- **02**: `spring-boot-microservices-devops-pipeline.md` - Main learning document
+- **03**: `learning-plan.md` - Structured timeline & phases
+- **04**: `requirements.md` - Complete technical requirements
+- **05**: `requirements-based-on-project-priority.md` - Role-specific priorities
+- **06**: `raw-requirements.md` - Original project specifications
+- **07**: `folder-structure.md` - Detailed folder organization
+- **08**: `index.md` - GitHub Pages homepage
+
+### **10-19: Learning Path Modules**
+#### **11: Foundations**
+- **11.1**: Spring Boot Containerization ⭐ (exists)
+- **11.2**: DevOps Principles for Microservices (planned)
+- **11.3**: AWS Services for Spring Boot (planned)
+- **11.4**: Microservices Architecture Patterns (planned)
+
+#### **12: Containerization**
+- **12.1**: Spring Boot Docker Optimization (planned)
+- **12.2**: Multi-stage Builds for Spring Boot (planned)
+- **12.3**: ECS Fargate Deployment (planned)
+- **12.4**: Microservices Orchestration (planned)
+
+#### **13: AWS Security** 🚨 **PRIORITY**
+- **13.1**: AWS WAF Deep Dive ⭐ (exists)
+- **13.2**: AWS Shield Protection (planned)
+- **13.3**: CloudFront Security (planned)
+- **13.4**: Security Automation (planned)
+
+#### **14: CI/CD Pipelines** 🚨 **PRIORITY**
+- **14.1**: GitLab CI/CD for Spring Boot Microservices (planned)
+- **14.2**: Multi-microservice Pipeline Patterns (planned)
+- **14.3**: Angular Build Deployment (planned)
+- **14.4**: Security Scanning Integration (planned)
+
+#### **15: Infrastructure as Code**
+- **15.1**: Terraform Fundamentals (planned)
+- **15.2**: AWS Terraform Patterns (planned)
+- **15.3**: CloudFormation Comparison (planned)
+- **15.4**: State Management (planned)
+
+#### **16: Monitoring & Observability**
+- **16.1**: CloudWatch Advanced (planned)
+- **16.2**: Application Monitoring (planned)
+- **16.3**: Alerting Strategies (planned)
+- **16.4**: Cost Optimization (planned)
+
+### **20-29: Hands-On Labs**
+#### **21: Foundation Setup**
+- **21.1**: Environment Preparation (planned)
+
+#### **22: AWS WAF Setup** ⭐ **PRIORITY LAB**
+- **22.1**: Main Lab Guide ⭐ (exists)
+- **22.2**: WAF Basic Deployment (planned)
+- **22.3**: Custom Rules Creation (planned)
+- **22.4**: Monitoring & Tuning (planned)
+
+#### **23-26: Additional Labs**
+- **23**: Containerization Lab (planned)
+- **24**: CI/CD Pipeline Lab (planned)
+- **25**: Infrastructure Lab (planned)
+- **26**: Monitoring Lab (planned)
+
+### **30-39: Project Tracking & Management**
+- **30.1**: Main Progress Dashboard ⭐ (exists)
+- **30.2**: Weekly Milestones (planned)
+- **30.3**: Skill Assessment (planned)
+- **30.4**: Completion Checklist (planned)
+
+### **40-49: Resources & References**
+- **40.1**: Reference Links (planned)
+- **40.2**: Troubleshooting Guide (planned)
+- **40.3**: Best Practices Checklist (planned)
+- **40.4**: Certification Paths (planned)
+
+### **50-59: Development Context**
+- **50.1**: Conversation Log ⭐ (exists)
+- **50.2**: User Profile ⭐ (exists)
+- **50.3**: Project Evolution (planned)
+
+---
+
+## 🎯 **Index Usage Guidelines**
+
+### **For Quick Navigation**
+- Use the numeric prefix to quickly locate documents
+- **Priority items marked with ⭐** should be accessed first
+- **🚨 Priority sections** require immediate attention
+
+### **For Learning Path**
+Follow the sequence: **11 → 12 → 13 → 14 → 15 → 16**
+- **Current focus**: 13.1 (AWS WAF) and 22.1 (WAF Lab)
+- **Next priority**: 14.1 (GitLab CI/CD)
+
+### **For Role-Based Access**
+- **DevOps Engineer**: Start with 02, focus on 13-15
+- **Security Engineer**: Start with 13.1, complete 22.1-22.4
+- **Platform Engineer**: Start with 15.1, focus on infrastructure
+- **Developer**: Start with 11.1, focus on 11-12 and 14
+
+---
+
 *Last Updated: November 3, 2025*
-*Navigation Structure: Optimized for GitHub Pages and repository browsing*
+*Index Structure: Hierarchical numbering for easy navigation and reference*

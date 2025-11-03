@@ -3,60 +3,88 @@
 ## 🧭 Navigation
 **For detailed navigation guide**: See [`NAVIGATION.md`](./NAVIGATION.md)
 
-## 📂 Complete Hierarchical Organization
+## 📂 Complete Hierarchical Organization with Index
 
 ```
 📁 aws-devops-gitlab-cicd-spring-boot-angular-fargate/
-├── � README.md                                    # Repository overview
-├── 🧭 NAVIGATION.md                               # Complete navigation guide ⭐ NEW
-├── 📄 folder-structure.md                         # This document
+├── 📖 00-README.md                                    # Repository overview
+├── 🧭 01-NAVIGATION.md                               # Complete navigation guide ⭐ NEW
+├── 📄 07-folder-structure.md                         # This document
+├── 📄 08-index.md                                    # GitHub Pages homepage
 │
 ├── 🎯 CORE DOCUMENTS
-│   ├── 📖 spring-boot-microservices-devops-pipeline.md  # Main learning document ⭐
-│   ├── �📄 raw-requirements.md                    # Original scattered requirements
-│   ├── 📄 requirements.md                        # 14-week comprehensive learning path
-│   ├── 📄 requirements-based-on-project-priority.md  # Role-specific immediate priorities
-│   └── 📄 learning-plan.md                       # Lambda→DevOps transition plan
+│   ├── 📖 02-spring-boot-microservices-devops-pipeline.md  # Main learning document ⭐
+│   ├──  03-learning-plan.md                        # Lambda→DevOps transition plan
+│   ├── 📄 04-requirements.md                         # 14-week comprehensive learning path
+│   ├── 📄 05-requirements-based-on-project-priority.md  # Role-specific immediate priorities
+│   └── 📄 06-raw-requirements.md                     # Original scattered requirements
 │
-├── 📁 learning-path/                         # Sequential learning modules
-│   ├── 📁 01-foundations/
-│   │   ├── 📄 containerization-basics.md
-│   │   ├── 📄 devops-principles.md
-│   │   ├── 📄 aws-services-comparison.md
-│   │   └── 📄 networking-fundamentals.md
+├── 📁 10-learning-path/                       # Sequential learning modules
+│   ├── 📁 11-foundations/
+│   │   ├── 📄 11.1-spring-boot-containerization.md
+│   │   ├── 📄 11.2-devops-principles-for-microservices.md
+│   │   ├── 📄 11.3-aws-services-for-spring-boot.md
+│   │   └── 📄 11.4-microservices-architecture-patterns.md
 │   │
-│   ├── 📁 02-containerization/
-│   │   ├── 📄 docker-for-lambda-devs.md
-│   │   ├── 📄 dockerfile-best-practices.md
-│   │   ├── 📄 container-orchestration.md
-│   │   └── 📁 hands-on-exercises/
+│   ├── 📁 12-containerization/
+│   │   ├── 📄 12.1-spring-boot-docker-optimization.md
+│   │   ├── 📄 12.2-multi-stage-builds-spring-boot.md
+│   │   ├── 📄 12.3-ecs-fargate-deployment.md
+│   │   └── � 12.4-microservices-orchestration.md
 │   │
-│   ├── 📁 03-aws-security/ 🚨 PRIORITY
-│   │   ├── 📄 aws-waf-deep-dive.md
-│   │   ├── 📄 aws-shield-protection.md
-│   │   ├── 📄 cloudfront-security.md
-│   │   └── 📄 security-automation.md
+│   ├── 📁 13-aws-security/ 🚨 PRIORITY
+│   │   ├── 📄 13.1-aws-waf-deep-dive.md ⭐
+│   │   ├── 📄 13.2-aws-shield-protection.md
+│   │   ├── 📄 13.3-cloudfront-security.md
+│   │   └── 📄 13.4-security-automation.md
 │   │
-│   ├── 📁 04-cicd-pipelines/ 🚨 PRIORITY
-│   │   ├── 📄 gitlab-cicd-fundamentals.md
-│   │   ├── 📄 pipeline-design-patterns.md
-│   │   ├── 📄 deployment-strategies.md
-│   │   └── 📄 security-integration.md
+│   ├── 📁 14-cicd-pipelines/ 🚨 PRIORITY
+│   │   ├── 📄 14.1-gitlab-cicd-spring-boot-microservices.md
+│   │   ├── 📄 14.2-multi-microservice-pipeline-patterns.md
+│   │   ├── 📄 14.3-angular-build-deployment.md
+│   │   └── 📄 14.4-security-scanning-integration.md
 │   │
-│   ├── 📁 05-infrastructure-as-code/
-│   │   ├── 📄 terraform-fundamentals.md
-│   │   ├── 📄 aws-terraform-patterns.md
-│   │   ├── 📄 cloudformation-comparison.md
-│   │   └── 📄 state-management.md
+│   ├── 📁 15-infrastructure-as-code/
+│   │   ├── 📄 15.1-terraform-fundamentals.md
+│   │   ├── 📄 15.2-aws-terraform-patterns.md
+│   │   ├── 📄 15.3-cloudformation-comparison.md
+│   │   └── 📄 15.4-state-management.md
 │   │
-│   └── 📁 06-monitoring-observability/
-│       ├── 📄 cloudwatch-advanced.md
-│       ├── 📄 application-monitoring.md
-│       ├── 📄 alerting-strategies.md
-│       └── 📄 cost-optimization.md
+│   └── 📁 16-monitoring-observability/
+│       ├── 📄 16.1-cloudwatch-advanced.md
+│       ├── 📄 16.2-application-monitoring.md
+│       ├── 📄 16.3-alerting-strategies.md
+│       └── 📄 16.4-cost-optimization.md
 │
-├── 📁 agent-memory/                          # AI assistant optimization
-│   ├── 📄 user-profile.md                    # User background & preferences
+├── 📁 20-hands-on-labs/                      # Practical exercises
+│   ├── 📁 21-week-01-foundation-setup/
+│   │   └── 📄 21.1-README.md
+│   ├── 📁 22-week-02-aws-waf-setup/ ⭐ PRIORITY LAB
+│   │   ├── 📄 22.1-README.md
+│   │   ├── 📄 22.2-waf-basic-deployment.md
+│   │   ├── 📄 22.3-custom-rules-creation.md
+│   │   └── 📄 22.4-monitoring-tuning.md
+│   ├── 📁 23-week-03-containerization-lab/
+│   ├── 📁 24-week-04-cicd-pipeline-lab/
+│   ├── 📁 25-week-05-infrastructure-lab/
+│   └── 📁 26-week-06-monitoring-lab/
+│
+├── 📁 30-project-tracking/                   # Progress management
+│   ├── 📄 30.1-dashboard.md
+│   ├── 📄 30.2-weekly-milestones.md
+│   ├── 📄 30.3-skill-assessment.md
+│   └── 📄 30.4-completion-checklist.md
+│
+├── 📁 40-resources/                          # Additional materials
+│   ├── 📄 40.1-reference-links.md
+│   ├── 📄 40.2-troubleshooting-guide.md
+│   ├── 📄 40.3-best-practices-checklist.md
+│   └── 📄 40.4-certification-paths.md
+│
+└── 📁 50-agent-memory/                       # AI assistant optimization
+    ├── 📄 50.1-conversation-log.md           # Learning progress tracking
+    ├── 📄 50.2-user-profile.md               # User background & preferences
+    └── 📄 50.3-project-evolution.md          # Repository change history
 │   ├── 📄 conversation-log.md                # Session history & patterns
 │   └── 📄 optimization-notes.md              # Continuous improvement
 │

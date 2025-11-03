@@ -6,50 +6,51 @@ layout: default
 # 🌟 DevOps Learning Hub
 ## Spring Boot Microservices to AWS Fargate
 
-### 🧭 [Complete Navigation Guide](./NAVIGATION.html)
+### 🧭 [01-NAVIGATION.md - Complete Navigation Guide](./NAVIGATION.html)
 
 ---
 
 ## 🚀 Quick Access
 
-### 📖 **Core Learning**
-- [**Main Document**: Spring Boot DevOps Pipeline](./spring-boot-microservices-devops-pipeline.html) ⭐
-- [Learning Plan & Timeline](./learning-plan.html)
-- [Technical Requirements](./requirements.html)
+### 📖 **Core Learning Documents**
+- [**02-Main Document**: Spring Boot DevOps Pipeline](./spring-boot-microservices-devops-pipeline.html) ⭐
+- [03-Learning Plan & Timeline](./learning-plan.html)
+- [04-Technical Requirements](./requirements.html)
+- [05-Priority Focus Areas](./requirements-based-on-project-priority.html)
 
-### 🎯 **Priority Focus Areas**
-- [AWS Security (WAF/Shield)](./learning-path/03-aws-security/aws-waf-deep-dive.html) 🚨
-- [GitLab CI/CD Pipelines](./learning-path/04-cicd-pipelines/) 🚨
+### 🎯 **Priority Learning Modules**
+- [13.1-AWS WAF Deep Dive](./learning-path/03-aws-security/aws-waf-deep-dive.html) 🚨 **Security**
+- [14.1-GitLab CI/CD for Spring Boot](./learning-path/04-cicd-pipelines/) 🚨 **Pipelines**
 
-### 🔨 **Hands-On Practice**
-- [AWS WAF Setup Lab](./hands-on-labs/week-02-aws-waf-setup/) 
-- [Progress Dashboard](./project-tracking/dashboard.html)
+### 🔨 **Hands-On Practice Labs**
+- [22.1-AWS WAF Setup Lab](./hands-on-labs/week-02-aws-waf-setup/) ⭐ **Priority Lab**
+- [30.1-Progress Dashboard](./project-tracking/dashboard.html)
 
 ---
 
-## 📚 Learning Path
+## 📚 Indexed Learning Path
 
 ```
-01. Foundations → 02. Containerization → 03. Security → 04. CI/CD → 05. Infrastructure → 06. Monitoring
+11. Foundations → 12. Containerization → 13. Security → 14. CI/CD → 15. Infrastructure → 16. Monitoring
 ```
 
 ### **Current Status**: Foundation Phase
-### **Next Priority**: AWS WAF Implementation
+### **Next Priority**: 13.1 AWS WAF Implementation
 ### **Timeline**: 12-week comprehensive program
 
 ---
 
-## 🔗 Quick Links
+## 🔗 Quick Links with Index
 
-| Resource | Purpose | Status |
-|----------|---------|--------|
-| [Navigation Guide](./NAVIGATION.html) | Complete repository guide | ✅ Ready |
-| [Learning Plan](./learning-plan.html) | Structured timeline | ✅ Ready |
-| [Security Module](./learning-path/03-aws-security/) | WAF/Shield implementation | 🚨 Priority |
-| [Hands-On Labs](./hands-on-labs/) | Practical exercises | 🔨 In Progress |
+| Index | Resource | Purpose | Status |
+|-------|----------|---------|--------|
+| 01 | [Navigation Guide](./NAVIGATION.html) | Complete repository guide | ✅ Ready |
+| 03 | [Learning Plan](./learning-plan.html) | Structured timeline | ✅ Ready |
+| 13.1 | [Security Module](./learning-path/03-aws-security/) | WAF/Shield implementation | 🚨 Priority |
+| 22.1 | [Hands-On Labs](./hands-on-labs/) | Practical exercises | 🔨 In Progress |
 
 ---
 
 *This repository provides a comprehensive learning path for DevOps engineers transitioning to Spring Boot microservices deployment on AWS Fargate with complete security and CI/CD pipeline setup.*
 
-**📖 [Start with the Navigation Guide](./NAVIGATION.html) for the complete learning experience.**
+**📖 [Start with 01-NAVIGATION.md](./NAVIGATION.html) for the complete indexed learning experience.**
