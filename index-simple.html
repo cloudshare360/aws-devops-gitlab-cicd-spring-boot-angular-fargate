@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS DevOps Learning Hub - Architecture Diagrams</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .status-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .section h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .diagram-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .diagram-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .diagram-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+        }
+        .diagram-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .diagram-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin: 5px 5px 0 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        .cta h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AWS DevOps Learning Hub</h1>
+        <p class="subtitle">Architecture Diagrams & Documentation</p>
+        
+        <div style="text-align: center;">
+            <span class="status-badge">✅ Live and Deployed</span>
+        </div>
+
+        <div class="section">
+            <h2>📊 Available Diagrams</h2>
+            
+            <div class="diagram-list">
+                <div class="diagram-card">
+                    <h3>🏗️ Complete System Architecture</h3>
+                    <p>End-to-end AWS infrastructure with load balancers, microservices, and data flow</p>
+                    <div>
+                        <span class="badge">AWS</span>
+                        <span class="badge">Fargate</span>
+                        <span class="badge">RDS</span>
+                    </div>
+                </div>
+
+                <div class="diagram-card">
+                    <h3>🔒 Security Architecture</h3>
+                    <p>Multi-layered security with AWS WAF, Shield, and VPC controls</p>
+                    <div>
+                        <span class="badge">WAF</span>
+                        <span class="badge">Shield</span>
+                        <span class="badge">Security</span>
+                    </div>
+                </div>
+
+                <div class="diagram-card">
+                    <h3>⚙️ CI/CD Pipeline</h3>
+                    <p>GitLab CI/CD workflow with 7 stages from build to production</p>
+                    <div>
+                        <span class="badge">GitLab</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">ECR</span>
+                    </div>
+                </div>
+
+                <div class="diagram-card">
+                    <h3>🎯 Microservices Deployment</h3>
+                    <p>Spring Boot microservices running on AWS Fargate</p>
+                    <div>
+                        <span class="badge">Spring Boot</span>
+                        <span class="badge">Microservices</span>
+                        <span class="badge">ECS</span>
+                    </div>
+                </div>
+
+                <div class="diagram-card">
+                    <h3>📈 Data Flow Architecture</h3>
+                    <p>Request processing flow and event-driven communication patterns</p>
+                    <div>
+                        <span class="badge">API Gateway</span>
+                        <span class="badge">Events</span>
+                        <span class="badge">Observability</span>
+                    </div>
+                </div>
+
+                <div class="diagram-card">
+                    <h3>🎨 Mermaid Diagrams</h3>
+                    <p>Text-based diagrams for version control and collaboration</p>
+                    <div>
+                        <span class="badge">Mermaid</span>
+                        <span class="badge">Git-Friendly</span>
+                        <span class="badge">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Visual Editor</h3>
+                    <p>Edit diagrams in VS Code with draw.io extension</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Version Control</h3>
+                    <p>All diagrams tracked in Git for full history</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Auto Deploy</h3>
+                    <p>GitHub Actions deploys changes automatically</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🆓</div>
+                    <h3>100% Free</h3>
+                    <p>All tools and hosting completely free</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>🎯 Get Started</h2>
+            <p style="margin-bottom: 20px;">Explore the architecture diagrams and documentation</p>
+            <a href="https://github.com/cloudshare360/aws-devops-gitlab-cicd-spring-boot-angular-fargate" class="btn">
+                📂 View Repository
+            </a>
+            <a href="./40-resources/diagrams/" class="btn">
+                📊 Browse Diagrams
+            </a>
+        </div>
+
+        <footer>
+            <p><strong>AWS DevOps Learning Hub</strong></p>
+            <p>Spring Boot • Angular • GitLab CI/CD • AWS Fargate</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                Deployed with ❤️ using GitHub Pages
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
