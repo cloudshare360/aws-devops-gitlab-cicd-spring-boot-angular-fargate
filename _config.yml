@@ -12,7 +12,27 @@ author:
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+remote_theme: just-the-docs/just-the-docs
+
+# Just the Docs theme settings
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+# Navigation
+nav_sort: case_insensitive
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer content
+footer_content: "AWS DevOps Learning Hub - Master Spring Boot microservices deployment to AWS Fargate"
+
+# Aux links for the upper right navigation
+aux_links:
+  "View on GitHub":
+    - "//github.com/cloudshare360/aws-devops-gitlab-cicd-spring-boot-angular-fargate"
 
 # Jekyll plugins
 plugins:
