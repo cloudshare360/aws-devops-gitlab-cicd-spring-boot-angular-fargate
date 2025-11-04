@@ -4,6 +4,7 @@ title: 13.1 AWS WAF Deep Dive
 parent: 3. AWS Security
 grand_parent: Learning Path
 nav_order: 1
+permalink: /learning-path/security/aws-waf-deep-dive/
 ---
 
 # 13.1 AWS WAF Deep Dive

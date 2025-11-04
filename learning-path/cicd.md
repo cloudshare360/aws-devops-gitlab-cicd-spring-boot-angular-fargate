@@ -4,6 +4,7 @@ title: 4. CI/CD Pipelines
 parent: Learning Path
 nav_order: 4
 has_children: true
+permalink: /learning-path/cicd/
 ---
 
 # 14. CI/CD Pipelines

@@ -4,6 +4,7 @@ title: 1. Foundations
 parent: Learning Path
 nav_order: 1
 has_children: true
+permalink: /learning-path/foundations/
 ---
 
 # 11. Foundations

@@ -4,6 +4,7 @@ title: 11.1 Spring Boot Containerization
 parent: 1. Foundations
 grand_parent: Learning Path
 nav_order: 1
+permalink: /learning-path/foundations/spring-boot-containerization/
 ---
 
 # 11.1 Spring Boot Containerization

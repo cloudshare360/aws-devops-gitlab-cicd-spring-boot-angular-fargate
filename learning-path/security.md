@@ -4,6 +4,7 @@ title: 3. AWS Security
 parent: Learning Path
 nav_order: 3
 has_children: true
+permalink: /learning-path/security/
 ---
 
 # 13. AWS Security
