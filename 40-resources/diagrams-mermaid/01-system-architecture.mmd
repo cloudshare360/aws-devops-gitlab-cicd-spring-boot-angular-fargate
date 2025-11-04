@@ -1,0 +1,118 @@
+---
+title: Complete System Architecture
+description: AWS DevOps System with Spring Boot, Angular, and Fargate deployment
+---
+graph TB
+    subgraph "Client Layer"
+        A[Angular SPA]
+        B[Mobile App]
+    end
+    
+    subgraph "AWS Cloud"
+        subgraph "Edge Security"
+            C[CloudFront CDN]
+            D[AWS WAF]
+            E[Shield]
+        end
+        
+        subgraph "Load Balancing"
+            F[Application Load Balancer]
+        end
+        
+        subgraph "Compute - ECS Fargate"
+            G1[Auth Service]
+            G2[Product Service]
+            G3[Order Service]
+            G4[Notification Service]
+        end
+        
+        subgraph "Data Layer"
+            H1[(RDS Aurora<br/>PostgreSQL)]
+            H2[(DynamoDB)]
+            H3[(ElastiCache<br/>Redis)]
+        end
+        
+        subgraph "Message Queue"
+            I[Amazon SQS]
+            J[Amazon SNS]
+        end
+        
+        subgraph "Storage"
+            K[S3 Bucket]
+            L[EFS]
+        end
+        
+        subgraph "Observability"
+            M[CloudWatch]
+            N[X-Ray]
+            O[CloudTrail]
+        end
+        
+        subgraph "CI/CD Pipeline"
+            P[GitLab CI/CD]
+            Q[ECR]
+            R[CodeDeploy]
+        end
+    end
+    
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    
+    F --> G1
+    F --> G2
+    F --> G3
+    F --> G4
+    
+    G1 --> H1
+    G2 --> H1
+    G3 --> H2
+    G1 --> H3
+    G2 --> H3
+    
+    G3 --> I
+    I --> G4
+    G4 --> J
+    
+    G2 --> K
+    G1 --> L
+    
+    G1 --> M
+    G2 --> M
+    G3 --> M
+    G4 --> M
+    
+    G1 -.-> N
+    G2 -.-> N
+    
+    P --> Q
+    Q --> R
+    R --> G1
+    R --> G2
+    R --> G3
+    R --> G4
+    
+    style A fill:#4fc3f7
+    style B fill:#4fc3f7
+    style C fill:#ff9800
+    style D fill:#f44336
+    style E fill:#f44336
+    style F fill:#9c27b0
+    style G1 fill:#4caf50
+    style G2 fill:#4caf50
+    style G3 fill:#4caf50
+    style G4 fill:#4caf50
+    style H1 fill:#2196f3
+    style H2 fill:#2196f3
+    style H3 fill:#2196f3
+    style I fill:#ff5722
+    style J fill:#ff5722
+    style K fill:#00bcd4
+    style L fill:#00bcd4
+    style M fill:#ffc107
+    style N fill:#ffc107
+    style P fill:#795548
+    style Q fill:#795548
+    style R fill:#795548

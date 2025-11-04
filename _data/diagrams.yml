@@ -1,0 +1,84 @@
+- id: 01-complete-system-architecture
+  title: Complete System Architecture
+  description: End-to-end system architecture showing all AWS services, load balancers,
+    microservices, and data flow from users to databases.
+  category: System Architecture
+  complexity: High
+  tags:
+  - AWS
+  - Infrastructure
+  - Overview
+  - Fargate
+  - RDS
+  source_file: 40-resources/diagrams/01-complete-system-architecture.drawio
+  url: /diagrams/01-complete-system-architecture/
+  drawio: /40-resources/diagrams/01-complete-system-architecture.drawio
+  thumbnail: /assets/img/diagram-placeholder.png
+- id: 02-security-architecture
+  title: Security Architecture
+  description: Multi-layered security implementation with AWS WAF, Shield, VPC security
+    groups, and application-level protection mechanisms.
+  category: Security
+  complexity: High
+  tags:
+  - Security
+  - WAF
+  - Shield
+  - VPC
+  - Authentication
+  source_file: 40-resources/diagrams/02-security-architecture.drawio
+  url: /diagrams/02-security-architecture/
+  drawio: /40-resources/diagrams/02-security-architecture.drawio
+  png: /diagrams/assets/png/02-security-architecture.png
+  thumbnail: /diagrams/assets/png/02-security-architecture_thumb.png
+- id: 03-cicd-pipeline
+  title: CI/CD Pipeline Architecture
+  description: Complete GitLab CI/CD pipeline showing 7 stages from code commit to
+    production deployment with approval gates and rollback strategies.
+  category: DevOps
+  complexity: Medium
+  tags:
+  - GitLab
+  - CI/CD
+  - Pipeline
+  - Deployment
+  - Automation
+  source_file: 40-resources/diagrams/03-cicd-pipeline.drawio
+  url: /diagrams/03-cicd-pipeline/
+  drawio: /40-resources/diagrams/03-cicd-pipeline.drawio
+  png: /diagrams/assets/png/03-cicd-pipeline.png
+  thumbnail: /diagrams/assets/png/03-cicd-pipeline_thumb.png
+- id: 04-microservices-deployment
+  title: Microservices Deployment
+  description: Detailed microservices architecture on AWS Fargate showing service
+    communication, load balancing, and container orchestration.
+  category: Architecture
+  complexity: High
+  tags:
+  - Microservices
+  - Fargate
+  - Spring Boot
+  - Angular
+  - Communication
+  source_file: 40-resources/diagrams/04-microservices-deployment.drawio
+  url: /diagrams/04-microservices-deployment/
+  drawio: /40-resources/diagrams/04-microservices-deployment.drawio
+  png: /diagrams/assets/png/04-microservices-deployment.png
+  thumbnail: /diagrams/assets/png/04-microservices-deployment_thumb.png
+- id: 05-data-flow-architecture
+  title: Data Flow Architecture
+  description: Request processing flow and event-driven communication patterns showing
+    user journeys, API gateway routing, and database operations.
+  category: Data Flow
+  complexity: Medium
+  tags:
+  - Data Flow
+  - Events
+  - API Gateway
+  - Processing
+  - Observability
+  source_file: 40-resources/diagrams/05-data-flow-architecture.drawio
+  url: /diagrams/05-data-flow-architecture/
+  drawio: /40-resources/diagrams/05-data-flow-architecture.drawio
+  png: /diagrams/assets/png/05-data-flow-architecture.png
+  thumbnail: /diagrams/assets/png/05-data-flow-architecture_thumb.png

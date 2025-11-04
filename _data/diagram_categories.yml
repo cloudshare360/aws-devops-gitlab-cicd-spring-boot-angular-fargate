@@ -1,0 +1,20 @@
+- count: 1
+  diagrams:
+  - 01-complete-system-architecture
+  name: System Architecture
+- count: 1
+  diagrams:
+  - 02-security-architecture
+  name: Security
+- count: 1
+  diagrams:
+  - 03-cicd-pipeline
+  name: DevOps
+- count: 1
+  diagrams:
+  - 04-microservices-deployment
+  name: Architecture
+- count: 1
+  diagrams:
+  - 05-data-flow-architecture
+  name: Data Flow

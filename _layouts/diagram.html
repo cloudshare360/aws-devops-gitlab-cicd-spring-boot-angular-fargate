@@ -1,0 +1,170 @@
+---
+layout: default
+---
+
+<article class="diagram-page">
+  <header class="diagram-header">
+    <h1>{{ page.title }}</h1>
+    <div class="diagram-meta">
+      <span class="category">{{ page.category }}</span>
+      <span class="complexity complexity-{{ page.complexity | downcase }}">{{ page.complexity }}</span>
+      <div class="tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <div class="diagram-content">
+    {{ content }}
+  </div>
+
+  <nav class="diagram-navigation">
+    <div class="nav-links">
+      <a href="/diagrams/" class="nav-link">&larr; Back to All Diagrams</a>
+      
+      {% assign current_index = 0 %}
+      {% for diagram in site.data.diagrams %}
+        {% if diagram.id == page.title %}
+          {% assign current_index = forloop.index0 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      
+      {% if prev_index >= 0 %}
+        {% assign prev_diagram = site.data.diagrams[prev_index] %}
+        <a href="{{ prev_diagram.url }}" class="nav-link">&larr; {{ prev_diagram.title }}</a>
+      {% endif %}
+      
+      {% if next_index < site.data.diagrams.size %}
+        {% assign next_diagram = site.data.diagrams[next_index] %}
+        <a href="{{ next_diagram.url }}" class="nav-link">{{ next_diagram.title }} &rarr;</a>
+      {% endif %}
+    </div>
+  </nav>
+</article>
+
+<style>
+.diagram-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.diagram-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.diagram-header h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.diagram-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: #007cba;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.complexity {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.complexity-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.complexity-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.complexity-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  border: 1px solid #dee2e6;
+}
+
+.diagram-content {
+  line-height: 1.6;
+}
+
+.diagram-navigation {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  color: #007cba;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #007cba;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .diagram-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>

@@ -1,0 +1,121 @@
+# Site settings
+title: "AWS DevOps Learning Hub"
+description: "Comprehensive guide for Spring Boot microservices deployment to AWS Fargate with GitLab CI/CD"
+baseurl: "/aws-devops-gitlab-cicd-spring-boot-angular-fargate"
+url: "https://cloudshare360.github.io"
+
+# Author
+author:
+  name: CloudShare360
+  email: info@cloudshare360.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Jekyll plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-relative-links
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Include/Exclude settings
+include:
+  - _pages
+  - diagrams
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - scripts/
+  - .vscode/
+  - .github/
+
+# Collections
+collections:
+  learning_modules:
+    output: true
+    permalink: /:collection/:name/
+  hands_on_labs:
+    output: true
+    permalink: /:collection/:name/
+  diagrams:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "learning_modules"
+    values:
+      layout: "module"
+  - scope:
+      path: ""
+      type: "hands_on_labs"
+    values:
+      layout: "lab"
+  - scope:
+      path: ""
+      type: "diagrams"
+    values:
+      layout: "diagram"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Learning Path
+    url: /learning-path/
+  - title: Architecture Diagrams
+    url: /diagrams/
+  - title: Hands-on Labs
+    url: /labs/
+  - title: Quick Reference
+    url: /quick-reference/
+
+# Diagram settings
+diagram:
+  formats:
+    - png
+    - svg
+  sizes:
+    thumbnail: 300x200
+    medium: 800x600
+    large: 1200x900
+
+# SEO
+google_analytics: UA-XXXXXXXXX-X
+google_site_verification: "your-verification-code"
+
+# Social
+github_username: cloudshare360
+linkedin_username: cloudshare360
+
+# Features
+show_excerpts: true
+show_downloads: true
+show_edit_on_github: true

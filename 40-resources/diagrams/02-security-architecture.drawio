@@ -1,0 +1,324 @@
+<mxfile host="app.diagrams.net" modified="2025-11-04T00:00:00.000Z" agent="5.0" etag="security-architecture" version="24.7.17">
+  <diagram name="Security Architecture" id="security-arch">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Security Architecture - AWS WAF, Shield, and VPC Protection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="427" y="20" width="800" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Threat Sources -->
+        <mxCell id="threats" value="Threat Sources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ddos-attack" value="DDoS Attacks" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sql-injection" value="SQL Injection" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="200" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="xss-attack" value="XSS Attacks" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="bot-traffic" value="Bot Traffic" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="malicious-ips" value="Malicious IPs" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="280" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="geo-threats" value="Geographic Threats" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="280" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Layer 1: AWS Shield -->
+        <mxCell id="shield-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9673a6;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shield-label" value="Layer 1: AWS Shield (Network Protection)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="410" y="90" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="shield-standard" value="AWS Shield Standard&#xa;(Free DDoS Protection)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="shield-advanced" value="AWS Shield Advanced&#xa;(Enhanced DDoS Protection&#xa;+ 24/7 DRT Support)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="130" width="180" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Layer 2: CloudFront + WAF -->
+        <mxCell id="waf-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="250" width="500" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="waf-label" value="Layer 2: CloudFront + AWS WAF (Application Protection)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cloudfront" value="CloudFront Distribution&#xa;(Global Edge Locations)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- WAF Rules -->
+        <mxCell id="waf-acl" value="Web ACL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="300" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Managed Rules -->
+        <mxCell id="managed-rules" value="AWS Managed Rules" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="core-rules" value="Core Rule Set&#xa;(OWASP Top 10)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="880" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="known-bad-inputs" value="Known Bad Inputs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="880" y="310" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sql-database-rules" value="SQL Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="880" y="350" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Custom Rules -->
+        <mxCell id="custom-rules" value="Custom Rules" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="330" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rate-limiting" value="Rate Limiting&#xa;(1000 req/5min)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ip-whitelist" value="IP Whitelist/&#xa;Blacklist" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="310" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="geo-blocking" value="Geographic&#xa;Blocking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="360" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Spring Boot API Rules -->
+        <mxCell id="springboot-rules" value="Spring Boot API Rules" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="380" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="api-path-rules" value="/api/* Protection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="260" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="actuator-rules" value="/actuator/* Blocking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="300" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="header-validation" value="Header Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="340" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="json-validation" value="JSON Body&#xa;Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="380" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Layer 3: VPC -->
+        <mxCell id="vpc-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="500" width="800" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc-label" value="Layer 3: VPC Security (Network &amp; Compute Protection)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="210" y="510" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- ALB -->
+        <mxCell id="alb-security" value="Application Load Balancer&#xa;(SSL/TLS Termination)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="560" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Groups -->
+        <mxCell id="sg-alb" value="ALB Security Group&#xa;(Port 80/443 from WAF)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="560" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sg-ecs" value="ECS Security Group&#xa;(Port 8080 from ALB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="560" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sg-rds" value="RDS Security Group&#xa;(Port 1521 from ECS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="560" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Spring Boot Applications -->
+        <mxCell id="springboot-apps" value="Spring Boot Microservices" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="660" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Application Security -->
+        <mxCell id="app-security" value="Application Security" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="660" width="150" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="spring-security" value="Spring Security&#xa;(Authentication)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="640" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jwt-validation" value="JWT Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="690" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="method-security" value="Method-level&#xa;Security" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="730" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Security -->
+        <mxCell id="db-security" value="Database Security" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="730" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="encryption-rest" value="Encryption at Rest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="720" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="encryption-transit" value="Encryption in Transit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="760" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="db-access-control" value="IAM Database&#xa;Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="730" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Monitoring & Logging -->
+        <mxCell id="monitoring-security" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ff6666;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="500" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="monitoring-label" value="Security Monitoring &amp; Logging" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ff6666;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="510" width="200" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="waf-logs" value="WAF Logs&#xa;(CloudWatch)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="540" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vpc-flow-logs" value="VPC Flow Logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="540" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cloudtrail" value="CloudTrail&#xa;(API Auditing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="600" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="guardduty" value="GuardDuty&#xa;(Threat Detection)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="600" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security-hub" value="Security Hub&#xa;(Compliance)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="660" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Attack Flow Arrows -->
+        <mxCell id="attack-flow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#ff0000;dashed=1;" edge="1" parent="1" source="threats" target="shield-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attack-label-1" value="Layer 1: Network Attack Mitigation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="270" y="110" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="attack-flow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#ff6600;dashed=1;" edge="1" parent="1" source="shield-layer" target="waf-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attack-label-2" value="Layer 2: Application Attack Filtering" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ff6600;" vertex="1" parent="1">
+          <mxGeometry x="850" y="210" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="attack-flow-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#ff9900;dashed=1;" edge="1" parent="1" source="waf-layer" target="vpc-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attack-label-3" value="Layer 3: Infrastructure Protection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ff9900;" vertex="1" parent="1">
+          <mxGeometry x="50" y="460" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- WAF Rule Connections -->
+        <mxCell id="rule-flow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;" edge="1" parent="1" source="waf-acl" target="managed-rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rule-flow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;" edge="1" parent="1" source="waf-acl" target="custom-rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rule-flow-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#b85450;" edge="1" parent="1" source="waf-acl" target="springboot-rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Layer Flow -->
+        <mxCell id="layer-flow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="cloudfront" target="alb-security">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="layer-flow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="alb-security" target="springboot-apps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="850" width="500" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="Security Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="860" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-threats" value="Threats" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="890" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-shield" value="Shield" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="140" y="890" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-waf" value="WAF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="890" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-vpc" value="VPC Security" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="300" y="890" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-app" value="Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="890" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-monitoring" value="Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="500" y="890" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-attack-flow" value="Attack Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="920" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-attack-line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#ff0000;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="930" as="sourcePoint" />
+            <mxPoint x="200" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend-data-flow" value="Data Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="920" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-data-line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="930" as="sourcePoint" />
+            <mxPoint x="340" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

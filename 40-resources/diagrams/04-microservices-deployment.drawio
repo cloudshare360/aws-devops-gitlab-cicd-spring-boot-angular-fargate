@@ -1,0 +1,351 @@
+<mxfile host="app.diagrams.net" modified="2025-11-04T00:00:00.000Z" agent="5.0" etag="microservices-deployment" version="24.7.17">
+  <diagram name="Microservices Deployment" id="microservices-deployment">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Spring Boot Microservices Deployment Architecture on AWS Fargate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="327" y="20" width="1000" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Internet and CDN Layer -->
+        <mxCell id="internet-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ff6600;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="1550" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="internet-label" value="Internet &amp; Content Delivery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ff6600;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="users" value="End Users" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="100" y="130" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cloudfront" value="CloudFront CDN&#xa;Global Edge Locations" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="130" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="route53" value="Route 53 DNS&#xa;Health Checks" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="130" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="waf-shield" value="AWS WAF + Shield&#xa;DDoS Protection" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="130" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Load Balancer Layer -->
+        <mxCell id="alb-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="230" width="1550" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="alb-label" value="Application Load Balancer Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="250" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="alb-public" value="Public ALB&#xa;Internet Facing&#xa;(Port 80/443)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="alb-internal" value="Internal ALB&#xa;Microservices&#xa;(Port 8080)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="270" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="target-groups" value="Target Groups&#xa;Health Checks&#xa;Auto Registration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="270" width="140" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- ECS Fargate Cluster -->
+        <mxCell id="ecs-cluster" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="360" width="1550" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="ecs-label" value="ECS Fargate Cluster - Microservices Container Platform" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="500" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Frontend Service -->
+        <mxCell id="frontend-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-label" value="Frontend Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="130" y="430" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="angular-app" value="Angular Application&#xa;- Single Page App&#xa;- Static Assets&#xa;- Service Worker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="460" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="nginx-server" value="NGINX Server&#xa;- Reverse Proxy&#xa;- SSL Termination&#xa;- Gzip Compression" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="530" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API Gateway Service -->
+        <mxCell id="gateway-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="420" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-label" value="API Gateway Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="370" y="430" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="spring-gateway" value="Spring Cloud Gateway&#xa;- API Routing&#xa;- Rate Limiting&#xa;- Circuit Breaker&#xa;- Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="340" y="460" width="160" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gateway-features" value="Gateway Features:&#xa;• Load Balancing&#xa;• Request/Response Filters&#xa;• Retry Mechanisms&#xa;• Timeout Handling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="340" y="540" width="160" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- User Service -->
+        <mxCell id="user-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="420" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="user-label" value="User Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="620" y="430" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="user-springboot" value="Spring Boot App&#xa;- User Management&#xa;- Authentication&#xa;- Profile Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="user-apis" value="REST APIs:&#xa;• POST /api/users&#xa;• GET /api/users/{id}&#xa;• PUT /api/users/{id}&#xa;• DELETE /api/users/{id}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="580" y="530" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Order Service -->
+        <mxCell id="order-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="780" y="420" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="order-label" value="Order Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="840" y="430" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="order-springboot" value="Spring Boot App&#xa;- Order Processing&#xa;- Payment Integration&#xa;- Inventory Check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="order-apis" value="REST APIs:&#xa;• POST /api/orders&#xa;• GET /api/orders/{id}&#xa;• PUT /api/orders/{id}&#xa;• GET /api/orders/user/{id}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="800" y="530" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Product Service -->
+        <mxCell id="product-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="420" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="product-label" value="Product Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="430" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="product-springboot" value="Spring Boot App&#xa;- Product Catalog&#xa;- Inventory Management&#xa;- Search &amp; Filtering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="product-apis" value="REST APIs:&#xa;• GET /api/products&#xa;• GET /api/products/{id}&#xa;• POST /api/products&#xa;• PUT /api/products/{id}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="530" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Notification Service -->
+        <mxCell id="notification-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="420" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-label" value="Notification Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="430" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notification-springboot" value="Spring Boot App&#xa;- Email Service&#xa;- SMS Notifications&#xa;- Push Notifications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notification-apis" value="REST APIs:&#xa;• POST /api/notifications&#xa;• GET /api/notifications/{id}&#xa;• PUT /api/notifications/{id}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="530" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Shared Infrastructure Services -->
+        <mxCell id="shared-services" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ff6600;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="420" width="140" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="shared-label" value="Shared Services" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ff6600;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="430" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="config-server" value="Config Server&#xa;Spring Cloud Config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="460" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="service-discovery" value="Service Discovery&#xa;AWS Cloud Map" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="510" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="monitoring-service" value="Monitoring&#xa;Actuator + Micrometer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="560" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Layer -->
+        <mxCell id="database-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b85450;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="840" width="1550" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="database-label" value="Database Layer - Oracle RDS Multi-AZ with Read Replicas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="850" width="500" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Primary Database -->
+        <mxCell id="primary-db" value="Primary RDS Oracle&#xa;Multi-AZ&#xa;Automated Backups&#xa;Point-in-Time Recovery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="900" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Read Replicas -->
+        <mxCell id="read-replica-1" value="Read Replica 1&#xa;us-west-2a&#xa;Read-only Queries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="420" y="900" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="read-replica-2" value="Read Replica 2&#xa;us-west-2b&#xa;Analytics Workload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="420" y="970" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Schemas -->
+        <mxCell id="user-schema" value="USER_SCHEMA&#xa;- Users Table&#xa;- Profiles Table&#xa;- Permissions Table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="order-schema" value="ORDER_SCHEMA&#xa;- Orders Table&#xa;- Order_Items Table&#xa;- Payments Table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="740" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="product-schema" value="PRODUCT_SCHEMA&#xa;- Products Table&#xa;- Categories Table&#xa;- Inventory Table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="880" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Connections -->
+        <mxCell id="connection-pool" value="Connection Pooling&#xa;HikariCP&#xa;Min: 5, Max: 20&#xa;Leak Detection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="migration-tool" value="Database Migration&#xa;Flyway&#xa;Version Control&#xa;Rollback Support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Caching Layer -->
+        <mxCell id="caching-redis" value="Redis Cache&#xa;ElastiCache&#xa;Session Storage&#xa;Application Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="900" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Cross-Cutting Concerns -->
+        <mxCell id="cross-cutting" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ff0000;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="900" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-cutting-label" value="Cross-Cutting" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="910" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security-concern" value="Security&#xa;JWT + OAuth2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="930" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="logging-concern" value="Logging&#xa;ELK Stack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="970" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Communication Patterns -->
+        <mxCell id="sync-comm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="spring-gateway" target="user-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sync-label-1" value="Synchronous&#xa;REST Calls" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="460" y="480" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sync-comm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="spring-gateway" target="order-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sync-comm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="spring-gateway" target="product-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Service-to-Service Communication -->
+        <mxCell id="service-comm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;" edge="1" parent="1" source="order-springboot" target="user-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="service-comm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;" edge="1" parent="1" source="order-springboot" target="product-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Async Communication -->
+        <mxCell id="async-comm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;dashed=1;" edge="1" parent="1" source="order-springboot" target="notification-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="async-label" value="Asynchronous&#xa;Event-Driven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="480" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Connections -->
+        <mxCell id="db-conn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="user-springboot" target="primary-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="db-conn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="order-springboot" target="primary-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="db-conn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="product-springboot" target="primary-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Load Balancer Connections -->
+        <mxCell id="lb-conn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="alb-public" target="angular-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lb-conn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="alb-internal" target="spring-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- CDN to Frontend -->
+        <mxCell id="cdn-conn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#ff6600;" edge="1" parent="1" source="waf-shield" target="alb-public">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Service Discovery -->
+        <mxCell id="discovery-conn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1" source="service-discovery" target="user-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="discovery-conn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1" source="service-discovery" target="order-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="discovery-conn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1" source="service-discovery" target="product-springboot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Deployment Patterns -->
+        <mxCell id="deployment-patterns" value="Deployment Patterns Used:&#xa;&#xa;🔄 Blue/Green Deployment&#xa;• Zero-downtime deployments&#xa;• Instant rollback capability&#xa;• Production validation&#xa;&#xa;📊 Rolling Updates&#xa;• Gradual service updates&#xa;• Health check validation&#xa;• Auto-rollback on failure&#xa;&#xa;🔧 Canary Releases&#xa;• Feature toggles&#xa;• A/B testing support&#xa;• Risk mitigation&#xa;&#xa;⚖️ Auto Scaling&#xa;• CPU/Memory based&#xa;• Custom metrics scaling&#xa;• Predictive scaling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Service Mesh Information -->
+        <mxCell id="service-mesh" value="Service Communication:&#xa;&#xa;🌐 Service Discovery&#xa;• AWS Cloud Map integration&#xa;• Dynamic service registration&#xa;• Health check automation&#xa;&#xa;🔒 Security&#xa;• mTLS encryption&#xa;• Service-to-service auth&#xa;• Network policies&#xa;&#xa;📊 Observability&#xa;• Distributed tracing&#xa;• Metrics collection&#xa;• Log aggregation&#xa;&#xa;🔄 Resilience&#xa;• Circuit breakers&#xa;• Retry mechanisms&#xa;• Timeout handling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Container Specifications -->
+        <mxCell id="container-specs" value="Container Specifications:&#xa;&#xa;💾 Resource Allocation&#xa;• CPU: 0.25 - 2 vCPU&#xa;• Memory: 512MB - 4GB&#xa;• Storage: 20GB ephemeral&#xa;&#xa;🏗️ Base Images&#xa;• OpenJDK 17 Alpine&#xa;• NGINX Alpine&#xa;• Node.js 18 Alpine&#xa;&#xa;🔧 Health Checks&#xa;• HTTP endpoint monitoring&#xa;• Actuator health checks&#xa;• Container health probes&#xa;&#xa;📱 Startup Configuration&#xa;• JVM optimization&#xa;• Spring profiles active&#xa;• Environment variables" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Performance Considerations -->
+        <mxCell id="performance" value="Performance Optimizations:&#xa;&#xa;⚡ JVM Tuning&#xa;• G1 garbage collector&#xa;• Heap size optimization&#xa;• JIT compilation settings&#xa;&#xa;💾 Caching Strategy&#xa;• Redis for session data&#xa;• Application-level caching&#xa;• Database query caching&#xa;&#xa;🔗 Connection Pooling&#xa;• HikariCP configuration&#xa;• Connection limits&#xa;• Leak detection&#xa;&#xa;📊 Monitoring&#xa;• APM integration&#xa;• Custom metrics&#xa;• Performance alerts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Considerations -->
+        <mxCell id="security-details" value="Security Implementation:&#xa;&#xa;🔐 Authentication &amp; Authorization&#xa;• JWT token validation&#xa;• OAuth2/OIDC integration&#xa;• Role-based access control&#xa;&#xa;🛡️ Network Security&#xa;• VPC isolation&#xa;• Security groups&#xa;• NACLs configuration&#xa;&#xa;🔒 Data Protection&#xa;• Encryption at rest&#xa;• Encryption in transit&#xa;• Secrets management&#xa;&#xa;📋 Compliance&#xa;• OWASP guidelines&#xa;• Security scanning&#xa;• Vulnerability assessment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Technology Stack -->
+        <mxCell id="tech-stack" value="Technology Stack:&#xa;&#xa;☕ Backend&#xa;• Spring Boot 3.x&#xa;• Spring Security&#xa;• Spring Data JPA&#xa;• Spring Cloud Gateway&#xa;&#xa;🎨 Frontend&#xa;• Angular 16+&#xa;• TypeScript&#xa;• RxJS&#xa;• Angular Material&#xa;&#xa;🗄️ Database&#xa;• Oracle 19c&#xa;• Redis Cache&#xa;• Flyway Migration&#xa;&#xa;☁️ Infrastructure&#xa;• AWS Fargate&#xa;• Application Load Balancer&#xa;• CloudFront + WAF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1080" width="250" height="280" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

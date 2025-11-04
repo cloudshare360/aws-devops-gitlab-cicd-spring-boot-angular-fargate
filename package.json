@@ -1,0 +1,42 @@
+{
+  "name": "aws-devops-learning-hub",
+  "version": "1.0.0",
+  "description": "GitHub Pages site for AWS DevOps learning with draw.io diagram rendering",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "convert-diagrams": "./scripts/convert-drawio.sh",
+    "generate-index": "python3 ./scripts/generate-diagram-index.py",
+    "setup": "npm install && bundle install",
+    "deploy": "npm run convert-diagrams && npm run generate-index && npm run build"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^10.6.1",
+    "puppeteer": "^21.5.2"
+  },
+  "devDependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudshare360/aws-devops-gitlab-cicd-spring-boot-angular-fargate.git"
+  },
+  "keywords": [
+    "aws",
+    "devops",
+    "spring-boot",
+    "angular", 
+    "fargate",
+    "gitlab-ci",
+    "microservices",
+    "docker",
+    "terraform",
+    "diagrams"
+  ],
+  "author": "CloudShare360",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

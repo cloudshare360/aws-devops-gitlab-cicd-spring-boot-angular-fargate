@@ -1,0 +1,74 @@
+---
+title: CI/CD Pipeline Architecture
+description: GitLab CI/CD pipeline with Docker, ECR, and Fargate deployment
+---
+graph LR
+    A[Developer] -->|Git Push| B[GitLab Repository]
+    
+    B --> C{GitLab CI/CD}
+    
+    C -->|Stage 1| D[Build & Test]
+    D -->|Maven Build| E[Unit Tests]
+    E -->|Code Quality| F[SonarQube]
+    
+    C -->|Stage 2| G[Security Scan]
+    G -->|SAST| H[Snyk/Trivy]
+    H -->|Dependency Check| I[OWASP]
+    
+    C -->|Stage 3| J[Docker Build]
+    J -->|Build Image| K[Tag Image]
+    K -->|Push| L[AWS ECR]
+    
+    C -->|Stage 4| M[Deploy to Dev]
+    M -->|Update Service| N[ECS Fargate Dev]
+    
+    C -->|Stage 5| O[Integration Tests]
+    O -->|E2E Tests| P[Selenium/Postman]
+    
+    C -->|Stage 6| Q{Manual Approval}
+    
+    Q -->|Approved| R[Deploy to Staging]
+    R --> S[ECS Fargate Staging]
+    
+    Q -->|Approved| T[Deploy to Production]
+    T --> U[Blue/Green Deployment]
+    U --> V[ECS Fargate Production]
+    
+    V --> W[Health Checks]
+    W -->|Success| X[Route Traffic]
+    W -->|Failure| Y[Rollback]
+    
+    L -.->|Pull Image| N
+    L -.->|Pull Image| S
+    L -.->|Pull Image| V
+    
+    Z[CloudWatch] -->|Monitoring| N
+    Z -->|Monitoring| S
+    Z -->|Monitoring| V
+    
+    style A fill:#4fc3f7
+    style B fill:#795548
+    style C fill:#ff9800
+    style D fill:#4caf50
+    style E fill:#4caf50
+    style F fill:#4caf50
+    style G fill:#f44336
+    style H fill:#f44336
+    style I fill:#f44336
+    style J fill:#2196f3
+    style K fill:#2196f3
+    style L fill:#2196f3
+    style M fill:#9c27b0
+    style N fill:#9c27b0
+    style O fill:#00bcd4
+    style P fill:#00bcd4
+    style Q fill:#ff5722
+    style R fill:#9c27b0
+    style S fill:#9c27b0
+    style T fill:#9c27b0
+    style U fill:#9c27b0
+    style V fill:#9c27b0
+    style W fill:#ffc107
+    style X fill:#4caf50
+    style Y fill:#f44336
+    style Z fill:#ffc107

@@ -1,5 +1,12 @@
 # 🌟 DevOps Learning Hub: Spring Boot Microservices to AWS Fargate
 
+## 🎨 **Visual Architecture Documentation**
+**🏗️ Architecture Diagrams**: Comprehensive visual documentation available at [`40-resources/diagrams/`](./40-resources/diagrams/)
+- Complete System Architecture, Security Layers, CI/CD Pipeline, Microservices Deployment, Data Flow
+- **VS Code Integration**: Edit diagrams directly with draw.io extension 
+- **GitHub Pages**: Auto-deployed visual documentation site
+- **📋 Diagram Setup Guide**: See [`DRAWIO_SETUP.md`](./DRAWIO_SETUP.md) for complete integration details
+
 ## 🧭 **Navigation Guide**
 **📖 Complete Navigation**: See [`01-NAVIGATION.md`](./01-NAVIGATION.md) for detailed repository guide and learning paths  
 **📋 Quick Reference**: See [`09-QUICK-REFERENCE.md`](./09-QUICK-REFERENCE.md) for indexed document table
@@ -21,6 +28,20 @@
 │   ├── 📖 [02-spring-boot-microservices-devops-pipeline.md](./02-spring-boot-microservices-devops-pipeline.md) ⭐ MAIN DOCUMENT
 │   ├── 📋 [05-requirements-based-on-project-priority.md](./05-requirements-based-on-project-priority.md) (Role-specific priorities)
 │   └── 📁 Quick Reference
+│       ├── 🔧 Emergency procedures for production issues
+│       └── 📋 Daily checklists and progress tracking
+│
+├── 🎨 ARCHITECTURE DIAGRAMS (Visual Documentation)
+│   ├── 📁 [40-resources/diagrams/](./40-resources/diagrams/) ⭐ SOURCE FILES
+│   │   ├── 🏗️ [01-complete-system-architecture.drawio](./40-resources/diagrams/01-complete-system-architecture.drawio)
+│   │   ├── 🛡️ [02-security-architecture.drawio](./40-resources/diagrams/02-security-architecture.drawio)
+│   │   ├── 🔄 [03-cicd-pipeline.drawio](./40-resources/diagrams/03-cicd-pipeline.drawio)
+│   │   ├── 🏭 [04-microservices-deployment.drawio](./40-resources/diagrams/04-microservices-deployment.drawio)
+│   │   └── 📊 [05-data-flow-architecture.drawio](./40-resources/diagrams/05-data-flow-architecture.drawio)
+│   ├── 📄 [DRAWIO_SETUP.md](./DRAWIO_SETUP.md) (VS Code & GitHub Pages integration)
+│   ├── 📄 [QUICKSTART.md](./QUICKSTART.md) (Local development guide)
+│   └── 🌐 GitHub Pages (Auto-deployed visual site)
+│
 │       ├── 🔧 Emergency procedures for production issues
 │       └── 📋 Daily checklists and progress tracking
 │
